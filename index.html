@@ -1047,94 +1047,125 @@ var imageUrl = snapshot.val().image;
 
 });
 
+var currentSponsorId = null; // Variable to track the current sponsor
+
+// Listen for new sponsors added to the database
 firebase.database().ref("sponsersup").on("child_added", function(snapshot) {
+    var imageUrl = snapshot.val().image;
+    var sponsorUrl = snapshot.val().url;
+    var sponsorId = snapshot.key; // Get the unique ID of the sponsor
 
-var imageUrl = snapshot.val().image;
-var sponsorUrl = snapshot.val().url;
+    // If no sponsor is currently displayed or if the current sponsor is different
+    if (currentSponsorId === null || currentSponsorId !== sponsorId) {
+        currentSponsorId = sponsorId; // Update the current sponsor ID
 
+        // Update the image element with the new sponsor's image
+        var sponserImage = document.getElementById('sponser1');
+        sponserImage.src = imageUrl;
 
-  // Select the image element with the class 'sponserimg'
-  var sponserImage = document.getElementById('sponser1');
+        // Update the click event to open the new sponsor's URL
+        sponserImage.onclick = function() {
+            // Check if sponsorUrl starts with 'http://' or 'https://'
+            if (sponsorUrl && !sponsorUrl.startsWith('http://') && !sponsorUrl.startsWith('https://')) {
+                sponsorUrl = 'https://' + sponsorUrl; // Add 'https://' if missing
+            }
 
-  // Update the image's src attribute with the URL from the database
-  sponserImage.src = imageUrl;
-  sponserImage.addEventListener('click', function() {
-        // Check if sponsorUrl starts with 'http://' or 'https://'
-        if (sponsorUrl && !sponsorUrl.startsWith('http://') && !sponsorUrl.startsWith('https://')) {
-            sponsorUrl = 'https://' + sponsorUrl; // Add 'https://' if missing
-        }
-
-        // Open the URL in a new window
-        window.open(sponsorUrl, '_blank');
-    });
-
+            // Open the URL in a new window
+            window.open(sponsorUrl, '_blank');
+        };
+    }
 });
 
 
 
+
+var currentSponsorId = null; // Variable to track the current sponsor
+
+// Listen for new sponsors added to the database
 firebase.database().ref("sponsersup2").on("child_added", function(snapshot) {
+    var imageUrl = snapshot.val().image;
+    var sponsorUrl = snapshot.val().url;
+    var sponsorId = snapshot.key; // Get the unique ID of the sponsor
 
-var imageUrl = snapshot.val().image;
-var sponsorUrl = snapshot.val().url;
-  // Select the image element with the class 'sponserimg'
-  var sponserImage = document.getElementById('sponser2');
+    // If no sponsor is currently displayed or if the current sponsor is different
+    if (currentSponsorId === null || currentSponsorId !== sponsorId) {
+        currentSponsorId = sponsorId; // Update the current sponsor ID
 
-  // Update the image's src attribute with the URL from the database
-  sponserImage.src = imageUrl;
-  sponserImage.addEventListener('click', function() {
-        // Check if sponsorUrl starts with 'http://' or 'https://'
-        if (sponsorUrl && !sponsorUrl.startsWith('http://') && !sponsorUrl.startsWith('https://')) {
-            sponsorUrl = 'https://' + sponsorUrl; // Add 'https://' if missing
-        }
+        // Update the image element with the new sponsor's image
+        var sponserImage = document.getElementById('sponser2');
+        sponserImage.src = imageUrl;
 
-        // Open the URL in a new window
-        window.open(sponsorUrl, '_blank');
-    });
+        // Update the click event to open the new sponsor's URL
+        sponserImage.onclick = function() {
+            // Check if sponsorUrl starts with 'http://' or 'https://'
+            if (sponsorUrl && !sponsorUrl.startsWith('http://') && !sponsorUrl.startsWith('https://')) {
+                sponsorUrl = 'https://' + sponsorUrl; // Add 'https://' if missing
+            }
 
-
+            // Open the URL in a new window
+            window.open(sponsorUrl, '_blank');
+        };
+    }
 });
+
+var currentSponsorId = null; // Variable to track the current sponsor
+
+// Listen for new sponsors added to the database
 firebase.database().ref("sponsersup3").on("child_added", function(snapshot) {
+    var imageUrl = snapshot.val().image;
+    var sponsorUrl = snapshot.val().url;
+    var sponsorId = snapshot.key; // Get the unique ID of the sponsor
 
-var imageUrl = snapshot.val().image;
-var sponsorUrl = snapshot.val().url;
-  // Select the image element with the class 'sponserimg'
-  var sponserImage = document.getElementById('sponser3');
+    // If no sponsor is currently displayed or if the current sponsor is different
+    if (currentSponsorId === null || currentSponsorId !== sponsorId) {
+        currentSponsorId = sponsorId; // Update the current sponsor ID
 
-  // Update the image's src attribute with the URL from the database
-  sponserImage.src = imageUrl;
-  sponserImage.addEventListener('click', function() {
-        // Check if sponsorUrl starts with 'http://' or 'https://'
-        if (sponsorUrl && !sponsorUrl.startsWith('http://') && !sponsorUrl.startsWith('https://')) {
-            sponsorUrl = 'https://' + sponsorUrl; // Add 'https://' if missing
-        }
+        // Update the image element with the new sponsor's image
+        var sponserImage = document.getElementById('sponser3');
+        sponserImage.src = imageUrl;
 
-        // Open the URL in a new window
-        window.open(sponsorUrl, '_blank');
-    });
+        // Update the click event to open the new sponsor's URL
+        sponserImage.onclick = function() {
+            // Check if sponsorUrl starts with 'http://' or 'https://'
+            if (sponsorUrl && !sponsorUrl.startsWith('http://') && !sponsorUrl.startsWith('https://')) {
+                sponsorUrl = 'https://' + sponsorUrl; // Add 'https://' if missing
+            }
 
-
+            // Open the URL in a new window
+            window.open(sponsorUrl, '_blank');
+        };
+    }
 });
+
+var currentSponsorId = null; // Variable to track the current sponsor
+
+// Listen for new sponsors added to the database
 firebase.database().ref("sponsersup4").on("child_added", function(snapshot) {
+    var imageUrl = snapshot.val().image;
+    var sponsorUrl = snapshot.val().url;
+    var sponsorId = snapshot.key; // Get the unique ID of the sponsor
 
-var imageUrl = snapshot.val().image;
-var sponsorUrl = snapshot.val().url;
-  // Select the image element with the class 'sponserimg'
-  var sponserImage = document.getElementById('sponser4');
+    // If no sponsor is currently displayed or if the current sponsor is different
+    if (currentSponsorId === null || currentSponsorId !== sponsorId) {
+        currentSponsorId = sponsorId; // Update the current sponsor ID
 
-  // Update the image's src attribute with the URL from the database
-  sponserImage.src = imageUrl;
-  sponserImage.addEventListener('click', function() {
-        // Check if sponsorUrl starts with 'http://' or 'https://'
-        if (sponsorUrl && !sponsorUrl.startsWith('http://') && !sponsorUrl.startsWith('https://')) {
-            sponsorUrl = 'https://' + sponsorUrl; // Add 'https://' if missing
-        }
+        // Update the image element with the new sponsor's image
+        var sponserImage = document.getElementById('sponser4');
+        sponserImage.src = imageUrl;
 
-        // Open the URL in a new window
-        window.open(sponsorUrl, '_blank');
-    });
+        // Update the click event to open the new sponsor's URL
+        sponserImage.onclick = function() {
+            // Check if sponsorUrl starts with 'http://' or 'https://'
+            if (sponsorUrl && !sponsorUrl.startsWith('http://') && !sponsorUrl.startsWith('https://')) {
+                sponsorUrl = 'https://' + sponsorUrl; // Add 'https://' if missing
+            }
 
-
+            // Open the URL in a new window
+            window.open(sponsorUrl, '_blank');
+        };
+    }
 });
+
 
 firebase.database().ref("product").on("child_added", function(snapshot) {
 
